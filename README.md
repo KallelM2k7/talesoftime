@@ -72,18 +72,33 @@ Relational Logic: Writing explicit JOIN queries to retrieve human-readable names
 
 Business Logic: Implementing item-stacking logic in the InventoryRepository.
 
-🛠 Useful Terminal Commands
-Command	Purpose
-git status	View modified files in your local workspace.
-git add .	Stage all changes for the next snapshot.
-git commit -m "msg"	Save a permanent version of your progress locally.
-git push origin main	Sync your local commits with your GitHub fork.
-CTRL + C	Safely stop the running Flask web server.
-⚠️ Troubleshooting
-Database Locked: Ensure you have closed any external database browser tools (like "DB Browser for SQLite") before running the app.
 
-Foreign Key Errors: Occurs if you attempt to delete a row that is referenced elsewhere. Ensure ON DELETE CASCADE is set in your schema.
+# ✅ Common Git Commands (Quick Reference)
 
-Missing Data: If your interface is empty, you likely skipped the python database/seed.py step.
+| Command | Purpose |
+|-------|---------|
+| `git status` | Shows which files have been modified, staged, or are untracked in your local workspace. |
+| `git add .` | Stages **all changes** so they are ready to be committed. |
+| `git commit -m "message"` | Saves a snapshot of your work locally with a clear description of what changed. |
+| `git push origin main` | Sends your committed changes to the `main` branch on GitHub. |
+| `Ctrl + C` | Safely stops a running Flask web server in the terminal. |
 
-Developed as part of the Web Development & Database Design curriculum.
+---
+
+## ⚠️ Troubleshooting Guide
+
+| Issue | What It Means | How to Fix It |
+|-----|--------------|---------------|
+| **Database is locked** | Another program is using the SQLite database. | Close any external tools such as **DB Browser for SQLite**, then restart the app. |
+| **Foreign key constraint error** | You tried to delete data that is still linked elsewhere. | Check your schema and ensure `ON DELETE CASCADE` is set where appropriate. |
+| **Missing or empty data** | The database has not been populated. | Make sure you have run `python database/seed.py` before starting the app. |
+
+---
+
+## ✅ If Something Breaks
+
+1. Stop the server (`Ctrl + C`)
+2. Run `git status`
+3. Read the error message carefully
+4. Fix **one issue at a time**
+5. Commit once it works again
