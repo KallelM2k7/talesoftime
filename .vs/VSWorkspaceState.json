@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\database"
+    "\\database",
+    "\\repositories"
   ],
-  "SelectedNode": "\\database\\schema.sql",
+  "SelectedNode": "\\repositories\\repositories.py",
   "PreviewInSolutionExplorer": false
 }
