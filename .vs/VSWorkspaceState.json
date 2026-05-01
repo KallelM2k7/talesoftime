@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\database"
   ],
-  "SelectedNode": "\\C:\\Users\\kalle\\Source\\Repos\\talesoftime",
+  "SelectedNode": "\\database\\schema.sql",
   "PreviewInSolutionExplorer": false
 }
